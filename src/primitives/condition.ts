@@ -48,21 +48,31 @@ export type ConditionViewLocation
     | "issue";
 
 /**
+ * Expression of possible values for condition `preferredColorScheme` field
+ */
+export type ConditionPreferredColorScheme
+    = "any"
+    | "light"
+    | "dark";
+
+/**
  * Signature/interface for a `Condition` object
  * @see https://developer.apple.com/documentation/apple_news/condition
  */
 export interface Condition {
-    horizontalSizeClass: ConditionSizeClass;
+    horizontalSizeClass?: ConditionSizeClass;
     maxColumns?: number; // Integer - Minimum: 1
     maxContentSizeCategory?: ConditionContentSizeCategory;
     maxSpecVersion?: string; // Apple News Version
-    maxViewportAspectRation?: number; // Unsigned Float
+    maxViewportAspectRatio?: number; // Unsigned Float
+    maxViewportWidth?: number; // Integer
     minColumns?: number; // Unsigned Integer
     minContentSizeCategory?: ConditionContentSizeCategory;
     minSpecVersion?: string; // Apple News Version
     minViewportAspectRatio?: number; // Unsigned Float
     minViewportWidth?: number; // Integer
     platform?: ConditionPlatform;
+    preferredColorScheme?: ConditionPreferredColorScheme;
     subscriptionStatus?: ConditionSubscriptionStatus;
     verticalSizeClass?: ConditionSizeClass;
     viewLocation?: ConditionViewLocation;

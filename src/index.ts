@@ -7,8 +7,9 @@ import * as Styles from "./styles";
 import { AdvertisementAutoPlacement as RootAdvertisementAutoPlacement } from "./advertisement-auto-placement";
 import { ArticleDocument as RootArticleDocument } from "./article-document";
 import { AutoPlacement as RootAutoPlacement } from "./auto-placement";
+import { AnyComponent as RootAnyComponent } from "./components/any-component";
 import { ConditionalAutoPlacement as RootConditionalAutoPlacement } from "./conditional-auto-placement";
-import { DocumentStyle as RootDocumentStyle } from "./document-style";
+import { ConditionalDocumentStyle as RootConditionalDocumentStyle, DocumentStyle as RootDocumentStyle } from "./document-style";
 
 export namespace AppleNews {
   // Root
@@ -17,6 +18,8 @@ export namespace AppleNews {
   export type AutoPlacement = RootAutoPlacement;
   export type ConditionalAutoPlacement = RootConditionalAutoPlacement;
   export type DocumentStyle = RootDocumentStyle;
+  export type ConditionalDocumentStyle = RootConditionalDocumentStyle;
+  export type AnyComponent = RootAnyComponent;
 
   // Article Layout
   export type Anchor = ArticleLayout.Anchor;
@@ -27,11 +30,11 @@ export namespace AppleNews {
 
   // Components
   export type Addition = Components.Addition;
+  export type LinkAddition = Components.LinkAddition;
   export type Behavior = Components.Behavior;
   export type ComponentAnimation = Components.ComponentAnimation;
   export type ComponentLink = Components.ComponentLink;
   export type Component = Components.Component;
-  export type Link = Components.Link;
   export type Scene = Components.Scene;
   export type BannerAdvertisement = Components.Advertisements.BannerAdvertisement;
   export type MediumRectangleAdvertisement = Components.Advertisements.MediumRectangleAdvertisement;
@@ -48,7 +51,7 @@ export namespace AppleNews {
   export type Audio = Components.AudioAndVideo.Audio;
   export type EmbedWebVideo = Components.AudioAndVideo.EmbedWebVideo;
   export type Music = Components.AudioAndVideo.Music;
-  export type Video = Components.AudioAndVideo.EmbedWebVideo;
+  export type Video = Components.AudioAndVideo.Video;
   export type ARKit = Components.AugmentedReality.ARKit;
   export type GalleryItem = Components.GalleriesAndMosaics.GalleryItem;
   export type Gallery = Components.GalleriesAndMosaics.Gallery;
@@ -91,6 +94,7 @@ export namespace AppleNews {
 
   // Metadata
   export type CampaignData = Metadata.CampaignData;
+  export type Issue = Metadata.Issue;
   export type LinkedArticle = Metadata.LinkedArticle;
   export type Metadata = Metadata.Metadata;
 
@@ -110,6 +114,7 @@ export namespace AppleNews {
   export type FontStyle = Primitives.FontStyle;
   export type FontWeight = Primitives.FontWeight;
   export type FontWidth = Primitives.FontWidth;
+  export type FontFamily = Primitives.FontFamily;
   export type TextDecoration = Primitives.TextDecoration;
   export type TextTransform = Primitives.TextTransform;
   export type TextVerticalAlignment = Primitives.TextVerticalAlignment;

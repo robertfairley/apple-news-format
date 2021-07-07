@@ -8,16 +8,18 @@ import { AdvertisementAutoPlacement as RootAdvertisementAutoPlacement } from "./
 import { ArticleDocument as RootArticleDocument } from "./article-document";
 import { AutoPlacement as RootAutoPlacement } from "./auto-placement";
 import { ConditionalAutoPlacement as RootConditionalAutoPlacement } from "./conditional-auto-placement";
-import { DocumentStyle as RootDocumentStyle } from "./document-style";
+import { DocumentStyle as RootDocumentStyle, ConditionalDocumentStyle as RootConditionalDocumentStyle } from "./document-style";
+import { AnyComponent as RootAnyComponent } from "./components/any-component";
 
 declare namespace AppleNews {
-
- // Root
+  // Root
   export type AdvertisementAutoPlacement = RootAdvertisementAutoPlacement;
   export type ArticleDocument = RootArticleDocument;
   export type AutoPlacement = RootAutoPlacement;
   export type ConditionalAutoPlacement = RootConditionalAutoPlacement;
   export type DocumentStyle = RootDocumentStyle;
+  export type ConditionalDocumentStyle = RootConditionalDocumentStyle;
+  export type AnyComponent = RootAnyComponent;
 
   // Article Layout
   export type Anchor = ArticleLayout.Anchor;
@@ -28,11 +30,11 @@ declare namespace AppleNews {
 
   // Components
   export type Addition = Components.Addition;
+  export type LinkAddition = Components.LinkAddition;
   export type Behavior = Components.Behavior;
   export type ComponentAnimation = Components.ComponentAnimation;
   export type ComponentLink = Components.ComponentLink;
   export type Component = Components.Component;
-  export type Link = Components.Link;
   export type Scene = Components.Scene;
   export type BannerAdvertisement = Components.Advertisements.BannerAdvertisement;
   export type MediumRectangleAdvertisement = Components.Advertisements.MediumRectangleAdvertisement;
@@ -49,7 +51,7 @@ declare namespace AppleNews {
   export type Audio = Components.AudioAndVideo.Audio;
   export type EmbedWebVideo = Components.AudioAndVideo.EmbedWebVideo;
   export type Music = Components.AudioAndVideo.Music;
-  export type Video = Components.AudioAndVideo.EmbedWebVideo;
+  export type Video = Components.AudioAndVideo.Video;
   export type ARKit = Components.AugmentedReality.ARKit;
   export type GalleryItem = Components.GalleriesAndMosaics.GalleryItem;
   export type Gallery = Components.GalleriesAndMosaics.Gallery;
@@ -111,6 +113,7 @@ declare namespace AppleNews {
   export type FontStyle = Primitives.FontStyle;
   export type FontWeight = Primitives.FontWeight;
   export type FontWidth = Primitives.FontWidth;
+  export type FontFamily = Primitives.FontFamily;
   export type TextDecoration = Primitives.TextDecoration;
   export type TextTransform = Primitives.TextTransform;
   export type TextVerticalAlignment = Primitives.TextVerticalAlignment;
